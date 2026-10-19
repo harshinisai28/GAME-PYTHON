@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Python runtime for the browser -->
+    <script type="module"
+        src="https://pyscript.net/releases/2025.8.1/core.js">
+    </script>
+</head>
+
+<body>
+    <main class="game-container">
+        <div class="game-icon">🎯</div>
+
+        <h1>Number Guessing Game</h1>
+
+        <p class="subtitle">
+            Guess the secret number between 1 and 100!
+        </p>
+
+        <div class="input-area">
+            <input
+                type="number"
+                id="guess"
+                min="1"
+                max="100"
+                placeholder="Enter your guess"
+                aria-label="Enter your guess"
+            >
+
+            <button id="check" type="button">Guess</button>
+        </div>
+
+        <p id="message" aria-live="polite">
+            Enter a number to start playing.
+        </p>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-label">Attempts</span>
+                <strong id="attempts">0</strong>
+            </div>
+
+            <div class="stat-box">
+                <span class="stat-label">Number Range</span>
+                <strong>1–100</strong>
+            </div>
+        </div>
+
+        <button id="restart" class="restart-button" type="button">
+            Play Again
+        </button>
+
+        <p class="footer">
+            Keep guessing until you find the number!
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+    <script type="py" src="./game.py"></script>
+</body>
+</html>

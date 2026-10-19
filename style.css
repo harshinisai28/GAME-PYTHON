@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+}
+
+.game-container {
+    width: 100%;
+    max-width: 460px;
+    padding: 35px 28px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(30, 41, 59, 0.15);
+}
+
+.game-icon {
+    font-size: 55px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    color: #4338ca;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid #c7d2fe;
+    border-radius: 10px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4f46e5;
+}
+
+button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #4f46e5;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #3730a3;
+    transform: translateY(-1px);
+}
+
+button:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 3px;
+}
+
+#message {
+    min-height: 48px;
+    margin: 15px 0;
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.stats {
+    display: flex;
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.stat-box {
+    flex: 1;
+    padding: 17px 10px;
+    background: #eef2ff;
+    border-radius: 12px;
+}
+
+.stat-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.stat-box strong {
+    color: #4338ca;
+    font-size: 23px;
+}
+
+.restart-button {
+    width: 100%;
+    background: #0f766e;
+}
+
+.restart-button:hover {
+    background: #115e59;
+}
+
+.footer {
+    margin-top: 22px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+@media (max-width: 400px) {
+    .game-container {
+        padding: 28px 18px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .input-area {
+        flex-direction: column;
+    }
+    input {
+        width: 100%;
+    }
+    .input-area button {
+        width: 100%;
+    }
+}
